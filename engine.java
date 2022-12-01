@@ -4,7 +4,8 @@ class engine {
     static int m_p, m_and, prod;
 
     public static void print(String concat) {
-        System.out.println(concat + "\nm.and\tm.p\tprod\n" + Integer.toBinaryString(m_and) + "\t" + Integer.toBinaryString(m_p) + "\t" + Integer.toBinaryString(prod));
+        System.out.println(concat + "\nm.and\tm.p\tprod\n" + Integer.toBinaryString(m_and) + "\t"
+                + Integer.toBinaryString(m_p) + "\t" + Integer.toBinaryString(prod));
     }
 
     public static void main(String[] args) {
@@ -24,6 +25,7 @@ class engine {
         print("Prod shift left one");
 
         for (int i = 0; i < 4; i++) {
+            System.out.println("Prod % 4 = " + Integer.toBinaryString(prod % 4));
             if (prod % 4 == 1) {
                 prod += m_and << 5;
             } else if (prod % 4 == 2) {
