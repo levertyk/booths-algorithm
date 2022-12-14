@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content" style="margin: 30px">
+      <h3>Input</h3>
+      <form>
+        <label>Bit Length</label>
+        <input type="number" name="bitLength" value="8" /><br />
+        <label>Multiplicand</label>
+        <input type="text" name="factor1" value="-127" /><br />
+        <label>Multiplier</label>
+        <input type="text" name="factor2" value="127" /><br />
+        <input type="button" name="multiply" value="Calculate" />
+      </form>
+
+      <h3>Calculation:</h3>
+      <table id="results">
+        <thead>
+          <tr>
+            <th>Iteration</th>
+            <th>Step</th>
+            <th>Multiplicand</th>
+            <th>Product</th>
+          </tr>
+        </thead>
+        <tbody style="font-family: monospace"></tbody>
+      </table>
+      <h3>Product:</h3>
+      <p id="product"></p>
+    </div>
+  </body>
+</html>
